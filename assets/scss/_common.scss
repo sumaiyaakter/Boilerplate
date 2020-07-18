@@ -1,0 +1,157 @@
+body {
+    font-family: $primary-font;
+}
+:focus {
+    outline: none;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+    @include transition(.3s);
+
+    &:hover {
+        text-decoration: none;
+    }
+    &:focus {
+        outline: 0;
+    }
+}
+button, .btn {
+    border: 0;
+    background: 0;
+    &:focus {
+        outline: 0;
+        box-shadow: none;
+    }
+}
+
+/*======== Colors ========*/
+// ALL OTHER COLOR HELPER CLASSES. 
+.text{
+    &--primary {
+        color: $primary-color;
+    }
+    
+}
+//  TEXT HOVER COLOR
+.text{
+    &-primary-hover{
+        &:hover{
+            color: $primary-color;
+        }
+    }
+}
+
+// BACKGROUND COLORS
+.bg{
+    &--primary {
+        background-color: $primary-color;
+    }
+}
+// BACKGROUND COLORS HOVER
+.bg{
+    &-primary-hover{
+        &:hover{
+            background-color: $primary-color;
+        }
+    }
+}
+// BORDER COLOR
+.border {
+    &-primary {
+        border-color: $border-primary !important;
+    }
+}
+
+/*======== Button ========*/
+.btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    background-color: $primary-color;
+    padding: 10px;
+    text-transform: capitalize;
+    @include transition(.3s);
+    &:hover{
+        color: $white;
+        background: darken( $primary-color, 10%);
+    }
+    &-outline{
+     }
+
+    &--xl{
+    }
+    &--lg{
+    }
+    &--md{
+    }
+    &--sm{
+    }
+    
+}
+
+/*======== Helpers ========*/
+.rounded{
+    &-5{
+        border-radius: 5px;
+    }
+    &-50{
+        border-radius: 50px;
+    }
+    &-100{
+        border-radius: 100px;
+    }
+    &-left-50{
+        border-top-left-radius: 50px!important;
+        border-bottom-left-radius: 50px!important;
+    }
+}
+.box-shadow{
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.35);
+}
+.z-index1 {
+    z-index: 1;
+}
+.z-index-1 {
+    z-index: -1;
+}
+
+/*======== Form ========*/
+
+/*======== Pagination ========*/
+
+
+/*======== Spacing ========*/
+
+/*======== Carousel ========*/
+
+
+/*======== Spacing ========*/
+$step: 5; // minimum value
+$max: 101; // maximum value (+)1
+@for $i from 2 through ceil($max/$step) {
+    $value: ($i - 1)*$step;
+    
+    .m-#{$value}{margin:#{$value}px;};
+    .mx-#{$value}{margin-left:#{$value}px;margin-right:#{$value}px;};
+    .my-#{$value}{margin-top:#{$value}px;margin-bottom:#{$value}px;};
+    .mt-#{$value}{margin-top:#{$value}px;};
+    .mb-#{$value}{margin-bottom:#{$value}px;};
+    .ml-#{$value}{margin-left:#{$value}px;};
+    .mr-#{$value}{margin-right:#{$value}px;};
+    .p-#{$value}{padding:#{$value}px;};
+    .px-#{$value}{padding-left:#{$value}px; padding-right:#{$value}px;};
+    .py-#{$value}{padding-top:#{$value}px; padding-bottom:#{$value}px;};
+    .pt-#{$value}{padding-top:#{$value}px;};
+    .pb-#{$value}{padding-bottom:#{$value}px;};
+    .pl-#{$value}{padding-left:#{$value}px;};
+
+    .height-#{$value}{height: #{$value}px;};
+    .width-#{$value}{width: #{$value}px;}
+
+    .mt-n#{$value} {margin-top:#{-$value}px;}
+    .mb-n#{$value} {margin-bottom:#{-$value}px;}
+    .ml-n#{$value} {margin-left:#{-$value}px;}
+    .mr-n#{$value} {margin-right:#{-$value}px;}
+}

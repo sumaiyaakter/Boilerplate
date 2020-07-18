@@ -1,0 +1,24 @@
+/*
+* ----------------------------------------------------------------------------------------
+Author       : 
+Template Name: 
+Version      : 
+* ----------------------------------------------------------------------------------------
+*/
+
+@import 'mixins';
+@import 'variable';
+/**-----  typography -----**/
+@import 'typography';
+/**-----  common -----**/
+@import 'common';
+
+/**-----  header -----**/
+@import 'templates/header';
+/**-----  navigation -----**/
+@import 'templates/navigation';
+/**-----  banner -----**/
+@import 'templates/banner';
+/**-----  footer -----**/
+@import 'templates/footer';
+
